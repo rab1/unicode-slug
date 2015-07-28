@@ -4,9 +4,13 @@
   } else if (typeof define === 'function' && define.amd) {
     define(['purify', 'unorm'], factory);
   } else {
-    root.unicodeSlug = factory(root.purify);
+    root.unicodeSlug = factory(root.purify, root.unorm);
   }
-}(this, function () {
+}(this, function (purify, unorm) {
+
+    function dasherize (str) {
+      return trim(str).replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
+    }
 
     function unicodeSlug(url) {
         var blocked = [
@@ -29,7 +33,7 @@
         slug = slug.replace(/\-+$/, '');
 
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
-        return slug.normalize();
+        return unorm.nfc(slug);
     }
 
     return unicodeSlug;

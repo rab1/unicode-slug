@@ -5,5 +5,6 @@ Unicode slug generator
 
 ~~~code
 unicodeSlug("विकिपीडिया इण्टरनेट ##^#^$*$@%$* ,;.'.'.,//// \\\ ...bllaaaa विकिपीडिया इण्टरनेट ")
-// generates url विकिपीडिया-इण्टरनेट-bllaaaa-विकिपीडिया-इण्टरनेट
+// generates url :
+// विकिपीडिया-इण्टरनेट-bllaaaa-विकिपीडिया-इण्टरनेट
 ~~~
