@@ -4,7 +4,7 @@
   "description": "Unicode slug generator",
   "main": "unicodeSlug.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "dependencies": {
     "purify": "^3.3.1",
     "unorm": "^1.3.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "unexpected": "^9.4.0"
   }
 }
